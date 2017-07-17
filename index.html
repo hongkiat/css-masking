@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Masking and Clipping on the Web</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+<!-- demo scripts -->
+<link rel="stylesheet" href="style.css">
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+	<h1 class="demo-title">Masking and Clipping on the Web</h1>
+	<p class="demo-desc"></p>
+</div>
+
+<!-- demo content -->
+<div class="container">
+
+<h1>Masking and Clipping on the Web</h1>
+
+<section class="overflow cf">
+
+<h2>Using Overflow</h2>
+<div class="rect">
+	<div class="circle"> </div>
+</div>
+
+<h4>Code</h4>
+<pre>
+.rect {
+	width: 200px;
+	height: 200px;
+	background-color: #eaeaea;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: #601785;
+	position: relative;
+	left: 100px;
+}
+
+</pre>
+</section>
+
+<section class="clip cf">
+	<h2>Using Clip</h2>
+	<section><div class="circle cf"></div></section>
+
+<h4>Code</h4>
+<pre>
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: #601785;
+	position: absolute;
+	clip: rect(0px,100px,200px,0px);
+	margin: 0 auto;
+}
+</pre>
+</section>
+
+<section class="text cf">
+<h2>Using Background Clip</h2>
+
+<h1>Galaxy</h1>
+
+<h4>Code</h4>
+<pre>
+h1 {
+	font-family: Arial;
+	font-size: 5em;
+	text-align: center;
+
+	background-image: url(Galaxy.jpg);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	color: rgba(0,0,0,0);
+}
+</pre>
+</section>
+</div>
+</body>
+</html>
